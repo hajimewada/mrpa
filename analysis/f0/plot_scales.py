@@ -46,7 +46,6 @@ def main():
             f"Scale={scales[i]} | "
             f"Freq={freqs[i]:.4f}"
         )
-        
         # f"Scale={scales[i]}  Freq={freqs.4f}"
         
     output_png = (
