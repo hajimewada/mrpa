@@ -475,3 +475,118 @@ Scale × Frequency ≈ 0.8125
 for all synthetic phrase conditions tested.
 
 This validates that phrase frequency is systematically mapped onto CWT scale space.
+
+
+MRPA Finding #011
+
+実JSUT発話では
+
+Plain Text
+Scale 64
+
+が最強です。
+
+これは人工実験の
+
+Plain Text
+Downstep
+Phrase
+
+側と一致しています。
+
+つまり、
+
+Plain Text
+実音声のF0は
+高周波成分より
+低周波成分が支配的
+
+であることを意味します。
+
+これは自然な結果です。
+
+Finding #011（修正版）
+
+BASIC5000_0459 の実F0では
+
+Plain Text
+高Scaleほどエネルギーが増加
+
+しています。
+
+つまり
+
+Plain Text
+Scale 64
+
+が支配的です。
+
+これは
+
+Plain Text
+文全体のイントネーション
+↓
+長距離トレンド
+
+が強く出ていることを示唆しています。
+
+なぜそうなるのか
+
+今回のF0を思い出すと、
+
+Plain Text
+329 frames
+
+しかありません。
+
+しかも
+
+Plain Text
+66Hz
+〜
+151Hz
+
+の比較的ゆっくりした変化です。
+
+つまり
+
+Plain Text
+短周期成分
+
+より
+
+Plain Text
+大域的な上昇下降
+
+が強い。
+
+そのため
+
+Plain Text
+Scale 64
+
+にエネルギーが集まるのは自然です。
+
+ここで重要
+
+現在のEnergyは
+
+Python
+energy = np.mean(np.abs(coeffs), axis=1)
+
+で計算しています。
+
+つまり
+
+Plain Text
+係数の絶対値平均
+``
+
+です。
+
+この指標だと、
+
+Plain Text
+長距離トレンド
+
+が非常に有利です。
